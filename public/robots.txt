@@ -1,0 +1,11 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://lawbridge.app/sitemap.xml
+
+# Disallow API routes
+Disallow: /api/
+
+
