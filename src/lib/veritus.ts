@@ -17,6 +17,7 @@ interface VeritusPaper {
   title: string;
   abstract?: string | null;
   authors?: string;
+  titleLink?: string;  // Primary URL field from Veritus API
   link?: string;
   pdfLink?: string;
   doi?: string | null;
@@ -80,7 +81,7 @@ export async function searchVeritus(options: VeritusSearchOptions): Promise<Veri
     const documents: VeritusDocument[] = papers.slice(0, limit).map((paper) => ({
       title: paper.title || 'Untitled Paper',
       content: paper.abstract || paper.tldr || `Academic paper: ${paper.title}. ${paper.authors ? `Authors: ${paper.authors}.` : ''} ${paper.journalName ? `Published in: ${paper.journalName}.` : ''} ${paper.year ? `Year: ${paper.year}.` : ''}`,
-      url: paper.link || paper.pdfLink || (paper.doi ? `https://doi.org/${paper.doi}` : 'https://scholar.google.com'),
+      url: paper.titleLink || paper.link || paper.pdfLink || (paper.doi ? `https://doi.org/${paper.doi}` : 'https://scholar.google.com'),
       score: paper.score || 0.8,
     }));
 

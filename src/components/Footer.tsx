@@ -83,8 +83,43 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Powered by Veritus */}
+        <div className="mt-10 flex justify-center">
+          <a 
+            href="https://veritus.ai" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group flex items-center gap-3 px-5 py-3 bg-[#141452]/20 hover:bg-[#141452]/30 border border-[#141452]/40 hover:border-[#141452]/60 rounded-xl transition-all duration-300"
+          >
+            <span className="text-xs text-[#6a6a80] group-hover:text-[#8a8aa0] transition-colors">Powered by</span>
+            <div className="flex items-center gap-2">
+              {/* Veritus Logo - Diamond V */}
+              <svg 
+                viewBox="0 0 100 100" 
+                className="w-6 h-6"
+                aria-hidden="true"
+              >
+                <polygon points="20,35 35,20 50,35" fill="#5865F2"/>
+                <polygon points="50,35 65,20 80,35" fill="#5865F2"/>
+                <polygon points="20,35 35,50 50,35" fill="#4752C4"/>
+                <polygon points="50,35 65,50 80,35" fill="#4752C4"/>
+                <polygon points="35,50 50,35 50,75" fill="#5865F2"/>
+                <polygon points="50,35 65,50 50,75" fill="#4752C4"/>
+                <polygon points="10,50 20,35 35,50 25,65" fill="#5865F2"/>
+                <polygon points="80,35 90,50 75,65 65,50" fill="#4752C4"/>
+                <polygon points="25,65 35,50 50,75 40,80" fill="#4752C4"/>
+                <polygon points="65,50 75,65 60,80 50,75" fill="#5865F2"/>
+              </svg>
+              <span className="text-sm font-semibold tracking-widest text-[#7B8AFF] group-hover:text-[#99A6FF] transition-colors" style={{ fontFamily: 'serif', letterSpacing: '0.15em' }}>
+                VERITUS
+              </span>
+              <span className="text-[10px] text-[#5865F2] font-medium">AI</span>
+            </div>
+          </a>
+        </div>
+
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-[rgba(255,255,255,0.06)] flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-8 pt-8 border-t border-[rgba(255,255,255,0.06)] flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-[#6a6a80]">
             &copy; {new Date().getFullYear()} LawBridge. All rights reserved.
           </p>

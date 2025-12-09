@@ -52,6 +52,20 @@ export default function CitationList({ citations }: CitationListProps) {
           </li>
         ))}
       </ul>
+      
+      {/* Powered by Veritus badge */}
+      <div className="mt-4 flex justify-end">
+        <a 
+          href="https://veritus.ai" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[10px] text-[#6a6a80] hover:text-[#7B8AFF] bg-[#141452]/10 hover:bg-[#141452]/20 border border-[#141452]/20 rounded-md transition-all duration-200"
+        >
+          <span>Powered by</span>
+          <span className="font-semibold tracking-wider text-[#7B8AFF]" style={{ fontFamily: 'serif' }}>VERITUS</span>
+          <span className="text-[#5865F2]">AI</span>
+        </a>
+      </div>
     </div>
   );
 }
